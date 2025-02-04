@@ -1,0 +1,28 @@
+   10  ls
+   28  git commit -m "first commit"
+   47  git push -u origin main
+   87  cd cs131/ws2
+   88  pwd
+   89  ls
+   90  head /proc/cpuinfo > cpuinfo_summary.txt
+   91  cat cpuinfo_summary.txt
+   92  tail /proc/cpuinfo > cpuinfo_tail.txt
+   93  ls
+   94  cat cpuinfo_tail.txt
+   95  head /proc/meminfo > meminfo_summary.txt
+   96  cat meminfo_summary.txt
+   97  ls
+   98  cat cpuinfo_summary.txt cpuinfo_tail.txt meminfo_summary.txt > system_summary.txt
+   99  cat system_summary.txt
+  100  ls
+  101  grep -c "processor" /proc/cpuinfo
+  102  grep "MHz" /proc/cpuinfo
+  103  uname -m
+  104  echo "Number of processors:" >> system_summary.txt
+  105  grep -c "processor" /proc/cpuinfo >> system_summary.txt
+  106  echo "CPU Speed (MHz):" >> system_summary.txt
+  107  grep "MHz" /proc/cpuinfo >> system_summary.txt
+  108  echo "Processor Architecture:" >> system_summary.txt
+  109  uname -m >> system_summary.txt
+  110  cat system_summary.txt
+  111  history > cmds.log
