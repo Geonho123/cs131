@@ -1,0 +1,47 @@
+Task 2:
+Home Directory Path: /home/geonho_lee  # This is the absolute path to the user's home directory on the server.
+Command Used: echo $HOME  # The 'echo $HOME' command retrieves the current user's home directory path.
+
+Task 3:
+UID: 1001 (geonho_lee)  # The UID (User ID) is a unique identifier for the user 'geonho_lee'.
+To what group(s) do you belong?
+Groups:
+  adm (4)  # Group for administrative tasks.
+  dialout (20)  # Group for accessing serial devices.
+  cdrom (24)  # Group for accessing CD-ROM drives.
+  floppy (25)  # Group for accessing floppy drives.
+  audio (29)  # Group for accessing audio devices.
+  dip (30)  # Group for managing network interfaces.
+  video (44)  # Group for accessing video devices.
+  plugdev (46)  # Group for accessing removable storage.
+  netdev (118)  # Group for managing network devices.
+  lxd (119)  # Group for managing Linux containers.
+  ubuntu (1000)  # Default group for the 'ubuntu' user.
+  google-sudoers (1001)  # Group for sudo privileges in Google Cloud.
+Command Used: id  # The 'id' command displays the user's UID and group memberships.
+
+Task 4:
+Which file under directory /proc/ contains information about memory (mem)?
+Answer: /proc/meminfo  # This file contains detailed memory usage statistics for the system.
+Which file under directory /proc/ contains information about the CPU's on your server?
+Answer: /proc/cpuinfo  # This file contains detailed information about the CPUs on the server.
+How did you find out?
+Answer:
+  I used the command ls /proc | grep mem to locate files related to memory.  # Searched for files related to memory using 'grep mem'.
+  I used the command ls /proc | grep cpu to locate files related to the CPU.  # Searched for files related to the CPU using 'grep cpu'.
+
+Task 5:
+How much total memory is on your server?
+Answer: 976904 kB  # This value represents the total memory available on the system in kilobytes (kB).
+
+Task 6:
+CPU Information:
+- Number of processors: 2  # The system has two processors available for use.
+- Processor architecture: x86_64  # The processor uses a 64-bit architecture (x86_64).
+- Processor speed: 2.20 GHz  # The clock speed of each processor is 2.20 GHz.
+
+Task 7:
+Operating System Version:
+- OS file: /etc/os-release  # This file contains information about the operating system version.
+- OS version: Ubuntu 20.04.6 LTS  # The operating system version installed on the server.
+
