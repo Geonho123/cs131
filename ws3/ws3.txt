@@ -1,0 +1,28 @@
+Task 1: Top 3 Pickup Locations on January 2, 2019
+-------------------------------------------------
+# Extracting data for January 2, 2019
+# Using grep to filter records, cut to extract pickup location IDs, 
+# then sorting, counting occurrences, and getting the top 3 locations
+Command Used:
+grep "2019-01-02" 2019-01-h1.csv | cut -d ',' -f 8 | sort | uniq -c | sort -nr | head -3
+
+Results:
+8605 161.0
+8407 132.0
+8163 186.0
+
+-------------------------------------------------
+
+Task 2: Top 3 Pickup Locations on January 10, 2019
+-------------------------------------------------
+# Extracting data for January 10, 2019
+# Using grep to filter records, cut to extract pickup location IDs, 
+# then sorting, counting occurrences, and getting the top 3 locations
+Command Used:
+grep "2019-01-10" 2019-01-h1.csv | cut -d ',' -f 8 | sort | uniq -c | sort -nr | head -3
+
+Results:
+13738 237.0
+13519 236.0
+12997 161.0
+
