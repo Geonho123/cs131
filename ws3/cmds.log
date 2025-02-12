@@ -1,0 +1,16 @@
+  112  cd cs131
+  122  mkdir ws3
+  124  pwd
+  128  sudo apt update
+  129  sudo apt install python3-pip -y
+  130  pip --version
+  131  pip install --user gdown
+  133  ~/.local/bin/gdown --version
+  136  gdown --version
+  141  grep "2019-01-02" 2019-01-h1.csv | head -5
+  142  grep "2019-01-02" 2019-01-h1.csv | cut -d ',' -f 8 | head -10
+  143  grep "2019-01-02" 2019-01-h1.csv | cut -d ',' -f 8 | sort | uniq -c | sort -nr | head -3
+  144  grep "2019-01-10" 2019-01-h1.csv | cut -d ',' -f 8 | sort | uniq -c | sort -nr | head -3
+  145  vim ws3.txt
+  146  cat ws3.txt
+  147  history > cmds.log
