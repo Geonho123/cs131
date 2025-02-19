@@ -1,0 +1,36 @@
+   1  echo "alias l='ls -ltr'" >> ~/.bashrc
+   2  echo "alias w='ls -l | wc'" >> ~/.bashrc
+   3  source ~/.bashrc
+   4  l
+   5  w
+   6  mkdir ~/cs131/a1/FARE
+   7  ls
+   8  head -10 dataset.csv
+   9  /home/<user-name>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+  10  ls -lh ~/cs131/a1/
+  11  du -h ~/cs131/a1/2019-01-h1.csv
+  12  ls -lh ~/cs131/a1/
+  13  head -1 ~/cs131/a1/2019-01-h1.csv
+  14  cut -d ',' -f 18,19 ~/cs131/a1/2019-01-h1.csv | sort | uniq -c | sort -nr | head -10
+  15  grep ",48.0,161.0" ~/cs131/a1/2019-01-h1.csv | cut -d ',' -f 10 > ~/cs131/a1/FARE/48.0-161.0.txt
+  16  head -10 ~/cs131/a1/FARE/48.0-161.0.txt
+  17  grep ",74.0,236.0" ~/cs131/a1/2019-01-h1.csv | cut -d ',' -f 10 > ~/cs131/a1/FARE/74.0-236.0.txt
+  18  ls -lh ~/cs131/a1/FARE/
+  19  cat ~/cs131/a1/a1.txt
+  20  grep "2019-01-10" ~/cs131/a1/2019-01-h1.csv | cut -d ',' -f 17 | sort -nr | head -1 >> ~/cs131/a1/a1.txt
+ 428  > ~/cs131/a1/a1.txt
+ 430  total=$(paste -sd+ ~/cs131/a1/FARE/48.0-161.0.txt | bc)
+ 431  count=$(wc -l < ~/cs131/a1/FARE/48.0-161.0.txt)
+ 432  echo "scale=2; $total / $count" | bc >> ~/cs131/a1/a1.txt
+ 433  total=$(paste -sd+ ~/cs131/a1/FARE/74.0-236.0.txt | bc)
+ 434  count=$(wc -l < ~/cs131/a1/FARE/74.0-236.0.txt)
+ 435  echo "scale=2; $total / $count" | bc >> ~/cs131/a1/a1.txt
+ 436  cat ~/cs131/a1/a1.txt  438  > ~/cs131/a1/a1.txt 
+ 446  grep "2019-01-10" ~/cs131/a1/2019-01-h1.csv | cut -d ',' -f 17 | sort -nr | head -1 >> ~/cs131/a1/a1.txt
+ 448  cut -d ',' -f 4,19 ~/cs131/a1/2019-01-h1.csv | grep -E '^[3-9],[0-9]+' | cut -d ',' -f 2 | sort | uniq -c | sort -nr | head -10 >> ~/cs131/a1/a1.txt
+ 457  total=$(paste -sd+ ~/cs131/a1/FARE/48.0-161.0.txt | bc)
+ 458  count=$(wc -l < ~/cs131/a1/FARE/48.0-161.0.txt)
+ 459  echo "scale=2; $total / $count" | bc >> ~/cs131/a1/a1.txt
+ 460  total=$(paste -sd+ ~/cs131/a1/FARE/74.0-236.0.txt | bc)
+ 461  count=$(wc -l < ~/cs131/a1/FARE/74.0-236.0.txt)
+ 462  echo "scale=2; $total / $count" | bc >> ~/cs131/a1/a1.txt
