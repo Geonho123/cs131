@@ -7,21 +7,30 @@ timestamp=$(date "+%F-%T")
 input_file="./2019-01-h1.csv"
 
 # Create CSV filenames with timestamp
-file1="${timestamp}-1.0.csv"
-file2="${timestamp}-2.0.csv"
-file3="${timestamp}-4.0.csv"
+declare -A vendors=( ["1.0"]="1.0" ["2.0"]="2.0" ["4.0"]="4.0" )
 
 # Initialize empty files
-touch "$file1" "$file2" "$file3"
+for key in "${!vendors[@]}"; do
+    files["$key"]="${timestamp}-${vendors[$key]}.csv"
+    touch "${files[$key]}"
+done
 
 # Fill CSV files with filtered data (excluding header)
-tail -n +2 "$input_file" | grep "^1.0," > "$file1"
-tail -n +2 "$input_file" | grep "^2.0," > "$file2"
-tail -n +2 "$input_file" | grep "^4.0," > "$file3"
-
+for key in "${!vendors[@]}"; do
+    tail -n +2 "$input_file" | grep "^${key}[,.]" > "${files[$key]}"
+done
 
 # Add CSV files to .gitignore
-echo "$file1" >> .gitignore
-echo "$file2" >> .gitignore
-echo "$file3" >> .gitignore
+for key in "${!vendors[@]}"; do
+    echo "${files[$key]}" >> .gitignore
+done
 
+# Store wc -l results in ws4.txt
+echo "File Line Counts:" > ws4.txt
+for key in "${!vendors[@]}"; do
+    echo "$(wc -l < "${files[$key]}") ${files[$key]}" >> ws4.txt
+done
+
+# Append .gitignore contents to ws4.txt
+echo -e "\n.gitignore contents:" >> ws4.txt
+cat .gitignore >> ws4.txt
