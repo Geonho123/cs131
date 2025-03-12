@@ -8,7 +8,7 @@ This shell script fetches the current price of a product from a given URL and de
 - Useful for getting notified when a product's price drops.  
 - Automates price monitoring without manual checking.  
 
-Specific scenario: Imagine that an item you want to buy has been listed in an auction. You want to track its price until it drops to your desired amount. However, you have assignments to complete and cannot spend the whole day constantly checking the auction website for price updates. In such a case, you can run this program, set the time interval, and monitor real-time price fluctuations without manually checking the website.  
+Specific scenario: Imagine that an item you want to buy has been listed in an auction. You want to track its price until it drops to your desired amount. However, you have assignments to complete and cannot spend the whole day constantly checking the auction website for price updates. In such a case, you can simply run this program, set the time interval, and monitor price fluctuations without manually checking the website.  
 
 ## How you can use this command  
 
