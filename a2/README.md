@@ -1,4 +1,6 @@
-# Price Checker Script  
+# Price Stalker
+
+## Price Checker Script  
 
 ## What this command does  
 This shell script fetches the current price of a product from a given URL and detects price changes over time.  
