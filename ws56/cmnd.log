@@ -2,13 +2,13 @@
 sed -n '/^2.0,/p' 2019-01-h1.csv > vendor2.csv
 head -10 vendor2.csv
 wc -l vendor2.csv
-sed 's/[:\"\-]//g' 2019-01-h1.csv > no-separators.csv
+sed 's/[:\"-]//g' 2019-01-h1.csv > no-separators.csv
 head -10 no-separators.csv
-sed 's/\.[0-9]*//g' no-separators.csv > no-fractions.csv
+sed 's/\.[0-9]*/ /g' no-separators.csv > no-fractions.csv
 head -10 no-fractions.csv
 
 # TASK 2
 awk -F',' 'NR > 1 && $17 >= 10 {tips[$14]++} END {for (t in tips) print t, tips[t]}' 2019-01-h1.csv > all_tips.txt
-head -10 all_tips.txt
+cat all_tips.txt >> ws56.txt
+echo "Top 20 most common tip amounts:" >> ws56.txt
 sort -k2 -nr all_tips.txt | head -20 >> ws56.txt
-
