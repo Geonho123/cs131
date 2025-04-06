@@ -1,0 +1,7 @@
+mkdir a3
+cd a3
+nano grader.awk
+nano grades.csv
+awk -f grader.awk grades.csv
+awk -f grader.awk grades.csv > a3.txt
+nano a3.txt

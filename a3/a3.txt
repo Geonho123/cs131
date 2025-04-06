@@ -1,0 +1,11 @@
+# Student results (Name, Total, Average, Pass/Fail)
+Name	Total	Average	Status
+Alice	253	84.333	Pass  # Alice: 85 + 90 + 78 = 253, avg = 84.333 -> Pass
+Bob	246	82	Pass  # Bob: 76 + 82 + 88 = 246, avg = 82 -> Pass
+Charlie	270	90	Pass  # Charlie: 90 + 85 + 95 = 270, avg = 90 -> Pass
+David	195	65	Fail  # David: 65 + 70 + 60 = 195, avg = 65 -> Fail
+Eve	265	88.333	Pass  # Eve: 88 + 92 + 85 = 265, avg = 88.333 -> Pass
+
+# Top and lowest score students
+Top score student: Charlie
+Lowest score student: David
